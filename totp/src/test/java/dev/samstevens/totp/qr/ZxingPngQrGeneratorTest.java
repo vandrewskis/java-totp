@@ -28,7 +28,7 @@ public class ZxingPngQrGeneratorTest {
                 .period(30)
                 .build();
 
-        writeFile(generator.generate(data), "./test_qr.png");
+        writeFile(generator.generate(data), "./target/test_qr.png");
     }
 
     @Test
@@ -43,7 +43,7 @@ public class ZxingPngQrGeneratorTest {
         byte[] data = generator.generate(getData());
 
         // Write the data to a temp file and read it into a BufferedImage to get the dimensions
-        String filename = "/tmp/test_qr.png";
+        String filename = "./target/test_qr-500.png";
         writeFile(data, filename);
         File file = new File(filename);
         BufferedImage image = ImageIO.read(file);
@@ -64,9 +64,7 @@ public class ZxingPngQrGeneratorTest {
 
         ZxingPngQrGenerator generator = new ZxingPngQrGenerator(writer);
 
-        QrGenerationException e = assertThrows(QrGenerationException.class, () -> {
-            generator.generate(getData());
-        });
+        QrGenerationException e = assertThrows(QrGenerationException.class, () -> generator.generate(getData()));
 
         assertEquals("Failed to generate QR code. See nested exception.", e.getMessage());
         assertEquals(exception, e.getCause());
