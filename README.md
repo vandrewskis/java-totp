@@ -29,9 +29,9 @@ To add this library to your java project using Maven, add the following dependen
 
 ```xml
 <dependency>
-  <groupId>ch.javacamp.totp</groupId>
+  <groupId>io.github.vandrewskis</groupId>
   <artifactId>totp</artifactId>
-  <version>1.8.0</version>
+  <version>1.8.1</version>
 </dependency>
 ```
 
@@ -41,7 +41,7 @@ To add the dependency using Gradle, add the following to the build script:
 
 ```
 dependencies {
-  compile 'ch.javacamp.totp:totp:1.8.0'
+  compile 'io.github.vandrewskis:totp:1.8.1'
 }
 ```
 

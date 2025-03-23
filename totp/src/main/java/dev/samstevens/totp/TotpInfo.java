@@ -1,5 +1,5 @@
 package dev.samstevens.totp;
 
 public class TotpInfo {
-    public static String VERSION = "1.8.0";
+    public static String VERSION = "1.8.1";
 }
